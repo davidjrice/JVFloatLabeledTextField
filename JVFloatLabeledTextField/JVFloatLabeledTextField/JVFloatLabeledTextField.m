@@ -137,7 +137,10 @@
         _floatingLabel.textColor = self.floatingLabelActiveTextColor;
     }
     else {
-        _floatingLabel.textColor = self.tintColor;
+        // _floatingLabel.textColor = self.tintColor;
+        // iOS 6.1 SDK Failure
+        // property 'tintColor' not found on object of type 'JVFloatLabeledTextField *'; did you mean 'textColor'?
+        _floatingLabel.textColor = self.textColor;
     }
 }
 
